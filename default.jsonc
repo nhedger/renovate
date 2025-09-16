@@ -1,0 +1,20 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"description": "Renovate Preset",
+	"schedule": ["on Monday"],
+	"extends": [
+		"config:base",
+
+		// Run lock file maintenance (updates) early Monday mornings.
+		":maintainLockFilesWeekly",
+
+		// Always widen peerDependencies SemVer ranges when updating, instead of replacing.
+		":widenPeerDependencies",
+
+		// Pin dependency versions for development dependencies.
+		":pinDevDependencies",
+
+		// If Renovate detects semantic commits, it will use semantic commit type arg0 for all commits.
+		":semanticCommitTypeAll(chore)"
+	]
+}

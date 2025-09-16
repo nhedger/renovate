@@ -1,0 +1,11 @@
+{
+	"name": "renovate",
+	"description": "Renovate Preset",
+	"homepage": "https://github.com/nhedger/renovate",
+	"scripts": {
+		"validate": "renovate-config-validator"
+	},
+	"devDependencies": {
+		"renovate": "latest"
+	}
+}
