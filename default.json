@@ -1,0 +1,12 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"description": "Renovate Preset",
+	"schedule": ["on Monday"],
+	"extends": [
+		"config:base",
+		":maintainLockFilesWeekly",
+		":widenPeerDependencies",
+		":pinDevDependencies",
+		":semanticCommitTypeAll(chore)"
+	]
+}
